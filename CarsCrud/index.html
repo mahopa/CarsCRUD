@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+
+    <input type="text" id="model" placeholder="Model"/>
+    <input type="text" id="year" placeholder="Year"/>
+    <div class="btn btn-success" onclick="CarsApp.CreateCar()"><i class="fa fa-truck fa-2x"></i><i class="fa fa-car fa-2x"></i><i class="fa fa-truck fa-2x"></i></div>
+
+    <div id="cars-table">
+
+    </div>
+
+
+
+
+    <!--Modal Starts Here-->
+    <div class="modal fade" id="edit-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                   <input class="" type="text" id="model-edit" />
+                   <input type="text" id="year-edit" />
+                   <input type="hidden" id="index-edit" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="CarsApp.SaveEditCar()">Save changes</button>
+                    <div class="btn btn-danger" onclick="CarsApp.DeleteCar()"><i class="fa fa-trash-o fa-4x"></i></div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
